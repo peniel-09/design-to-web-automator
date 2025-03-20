@@ -19,56 +19,58 @@ const BalancingBike = () => {
 
   return (
     <div className="relative w-full h-[350px]">
-      {/* Road/Path */}
+      {/* Straight Road */}
       <svg 
         className="w-full h-full"
         viewBox="0 0 500 200" 
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Curved road */}
-        <path 
-          d="M500,100 Q400,10 300,100 T100,100" 
+        {/* Straight road background */}
+        <rect 
+          x="0" 
+          y="80" 
+          width="500" 
+          height="40" 
           fill="#3a3a3a" 
-          stroke="#ffffff" 
-          strokeWidth="2"
         />
         
         {/* Road markings */}
-        <path 
-          d="M490,100 Q400,20 300,100 T110,100" 
-          fill="none" 
+        <line 
+          x1="0" 
+          y1="100" 
+          x2="500" 
+          y2="100" 
           stroke="#ffffff" 
           strokeWidth="2" 
           strokeDasharray="10,15"
         />
         
         {/* Road edge - top */}
-        <path 
-          d="M500,95 Q400,5 300,95 T100,95" 
-          fill="none" 
+        <line 
+          x1="0" 
+          y1="80" 
+          x2="500" 
+          y2="80" 
           stroke="#ffffff" 
           strokeWidth="2"
         />
         
         {/* Road edge - bottom */}
-        <path 
-          d="M500,105 Q400,15 300,105 T100,105" 
-          fill="none" 
+        <line 
+          x1="0" 
+          y1="120" 
+          x2="500" 
+          y2="120" 
           stroke="#ffffff" 
           strokeWidth="2"
         />
-        
-        {/* Placeholder for motorcycle (image will be placed on top) */}
-        <g transform={`translate(140, 100)`}>
-          <rect x="-15" y="-15" width="30" height="30" fill="none" />
-        </g>
       </svg>
       
-      {/* The actual motorcycle image */}
+      {/* The horizontal motorcycle image */}
       <div 
-        className="absolute top-[85px] left-[125px]" 
+        className="absolute top-[85px] left-[200px]" 
         style={{ 
-          transform: `rotate(${bikePosition}deg)`,
+          transform: `scaleX(-1) rotate(${bikePosition}deg)`,
           transition: 'transform 0.1s ease-in-out',
           zIndex: 10
         }}
