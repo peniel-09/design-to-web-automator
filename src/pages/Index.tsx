@@ -25,7 +25,7 @@ const Index = () => {
             <div className="animate-float">
               <div className="flex flex-col items-start">
                 <img 
-                  src="/lovable-uploads/0d84db88-71a9-4605-9fce-b7e827c221e4.png" 
+                  src="/lovable-uploads/2e4c7fed-24cd-4010-84bf-0588482326b4.png" 
                   alt="Arduino Open-Source Community" 
                   className="w-64 h-auto"
                 />
